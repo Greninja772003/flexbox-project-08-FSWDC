@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+
+<body>
+    <div id="main">
+        <div class="box">
+            <h3>Basic</h3>
+            <h1>$11.99/month</h1>
+            <h4><img src="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" alt=""> 10GB Storage</h4>
+            <h4><img src="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" alt=""> 1 User</h4>
+            <h4><img src="https://cdn-icons-png.flaticon.com/128/929/929457.png" alt=""> Support</h4>
+            <button>Sign up</button>
+        </div>
+        <div class="box">
+            <h3>Standard</h3>
+            <h1>$19.99/month</h1>
+            <h4><img src="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" alt=""> 50GB Storage</h4>
+            <h4><img src="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" alt=""> 5 User</h4>
+            <h4><img src="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" alt=""> Phone & Email Support</h4>
+            <button>Sign up</button>
+        </div>
+        <div class="box">
+            <h3>Premium</h3>
+            <h1>$49.99/month</h1>
+            <h4><img src="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" alt=""> 100GB Storage</h4>
+            <h4><img src="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" alt=""> 10 Users</h4>
+            <h4><img src="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" alt=""> 24/7 Support</h4>
+            <button>Sign up</button>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #212121;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .box h4 img {
+        height: 1em;
+        vertical-align: middle;
+    }
+
+    #main {
+        padding: 25px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        height: 80%;
+        gap: 20px;
+
+    }
+
+    .box {
+        background-color: #333;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 40vh;
+        flex-wrap: wrap;
+
+    }
+
+    button {
+        background-color: orangered;
+        color: #fff;
+    }
+
+    @media(max-width: 650px) {
+        #main {
+            flex-direction: column;
+        }
+
+        .box {
+            width: 30vh;
+        }
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+        h4 {
+            font-size: .8em;
+        }
+    }
+</style>
+
+</html>
